@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fisheye - photographer</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/index.html" class="header_page">
+        <img
+          src="assets/images/logo.png"
+          alt="Logo de FishEye"
+          aria-labelledby="Logo de FishEye"
+          class="header_logo"
+        />
+      </a>
+    </header>
+
+    <main
+      class="main_card"
+      id="main_card"
+      alt="Logo de FishEye"
+      aria-labelledby="Logo de FishEye"
+    >
+      <div
+        id="photographer-data"
+        class="photographer-data"
+        tabindex="0"
+        role="navigation"
+        aria-labelledby="photographer-data"
+      ></div>
+      <button
+        class="contact_button"
+        id="contact_button"
+        tabindex="0"
+        role="conntact"
+        aria-labelledby="contact_button"
+        onclick="displayModal()"
+      >
+        Contactez-moi
+      </button>
+      <div
+        class="photographer_image"
+        id="photographer_image"
+        tabindex="0"
+        aria-labelledby="photographer_image"
+      ></div>
+      <section
+        class="static-counter"
+        aria-labelledby="static-counter"
+        id="static_counter"
+        tabindex="0"
+        role="counter"
+      >
+        <div
+          class="static-counter_like-counter"
+          aria-labelledby="static-counter_like"
+          id="counter-like"
+          tabindex="0"
+          role="counter"
+        >
+          <p
+            id="likeCounter"
+            aria-labelledby="like"
+            id="counterLike"
+            tabindex="0"
+            role="counter"
+          >
+            680
+          </p>
+          <img
+            src="assets/icons/Vector-like.png"
+            aria-labelledby="like"
+            id="counter-like"
+            tabindex="0"
+            role="vector"
+          />
+        </div>
+        <p
+          id="price"
+          aria-labelledby="price"
+          id="price"
+          tabindex="0"
+          role="price"
+        >
+          400€ / jour
+        </p>
+      </section>
+    </main>
+    <div
+      class="filter-by"
+      tabindex="0"
+      role="trier"
+      aria-labelledby="filterList"
+    >
+      <span id="filter-by">Trier par</span>
+    </div>
+    <div
+      class="listbox-sort"
+      id="filterByOption"
+      tabindex="0"
+      role="choise"
+      aria-labelledby="listbox"
+    ></div>
+    <div class="arrow"></div>
+    <div class="photographer-medias" id="photographer-medias"></div>
+
+    <div
+      class="modal"
+      aria-labelledby="contactModal"
+      id="contact_modal"
+      tabindex="+0"
+      role="dialog"
+      aria-labelledby="contactModal"
+    >
+      <h2>
+        Contactez-moi
+        <br />
+        <span
+          id="contact"
+          tabindex="+0"
+          role="title"
+          role="document"
+          aria-labelledby="contactModal"
+        ></span>
+      </h2>
+      <img
+        src="assets/icons/close.svg"
+        class="close-contact"
+        aria-labelledby="closeModal"
+        id="close_modal"
+        tabindex="+0"
+        role="close"
+        onclick="closeModal()"
+      />
+      <form>
+        <div>
+          <label>Prénom</label>
+          <input />
+          <label>Nom</label>
+          <input />
+          <label>Email</label>
+          <input />
+          <label>Votre message</label>
+          <input />
+        </div>
+        <button id="submit_button" class="contact_button">Envoyer</button>
+      </form>
+    </div>
+    <div
+      id="lightbox_modal"
+      tabindex="0"
+      class="lightbox_modal"
+      tabindex="0"
+      aria-details="defilement image"
+    >
+      <div class="next" role="arrow" aria-label="Media suivant">
+        <img
+          src="assets/icons/previous.png"
+          tabindex="+0"
+          alt="fleche de gauche"
+        />
+      </div>
+
+      <div class="previous" role="arrow" aria-label="Media précédant">
+        <img src="assets/icons/next.png" tabindex="+0" alt="fleche de droite" />
+      </div>
+      <img
+        src="assets/icons/vector.png"
+        class="close-lightbox"
+        tabindex="0"
+        aria-label="Fermer la boite de dialog"
+        onclick="closeLightbox()"
+      />
+
+      <div class="lightbox-img"></div>
+      <p id="lightbox-title"></p>
+    </div>
+    <script src="/scripts/factories/photographer-pageFactory.js"></script>
+    <script src="/scripts/utils/contactForm.js"></script>
+    <script src="/scripts/utils/lightbox-modal.js"></script>
+    <script src="/scripts/pages/photographer.js"></script>
+  </body>
+</html>

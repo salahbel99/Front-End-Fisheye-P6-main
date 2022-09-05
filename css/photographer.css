@@ -1,0 +1,390 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+#contact_modal {
+  display: none;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_logo {
+  margin: 20px 50px 20px 61px;
+  height: 50px;
+}
+
+.photographer-header {
+  background-color: #fafafa;
+  height: 300px;
+  margin: 0px 50px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px 0 50px;
+}
+
+.photographer-header img {
+  border-radius: 50%;
+}
+.main_card {
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 60px 50px 61px;
+  background: whitesmoke;
+}
+
+.main_card h2 {
+  font-size: 36px;
+  color: #d3573c;
+}
+
+.main_card p {
+  font-size: 24px;
+  color: #d3573c;
+  font-weight: 400;
+}
+
+.contact_button {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 50px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.active {
+  display: block !important;
+}
+
+.rotate {
+  transform: rotateZ(180deg);
+  padding-right: 20px;
+}
+
+.listbox-sort {
+  z-index: 1;
+  color: #fff;
+  background-color: #901c1c;
+  cursor: pointer;
+  border-radius: 2.5px;
+  border: none;
+  font-size: 20px;
+  width: 10rem;
+  position: absolute;
+  padding: 15px 0;
+  margin-left: 130px;
+}
+
+.listbox-sort span {
+  padding-left: 25px;
+}
+
+.item {
+  margin: 10px 10px 10px 10px;
+}
+
+hr {
+  margin: 25px;
+}
+.photographer_image img {
+  margin-left: 5px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.sortList {
+  display: none;
+}
+
+.filter-by {
+  display: grid;
+  float: left;
+  margin-right: -54px;
+  margin-left: 61px;
+}
+
+.static-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 5rem;
+  bottom: 0rem;
+  padding: 0.5rem;
+  background: rgba(196, 196, 196, 0.5);
+  color: #000;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 20rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+}
+
+.static-counter_like-counter {
+  display: flex;
+  align-items: baseline;
+}
+
+.static-counter_like-counter p {
+  margin-right: 0.5rem;
+}
+
+.photographer-medias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding-top: 60px;
+}
+
+.like {
+  cursor: pointer;
+  text-shadow: 5px 8px 15px transparent;
+  transition: 0.5s;
+}
+
+.like:hover {
+  color: #db8876;
+  transform: scale(1.2);
+}
+
+.photographer-medias .photos {
+  width: 86%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.photographer-medias p {
+  padding-left: 0px;
+}
+.photographer-medias span {
+  display: flex;
+  float: right;
+  margin-top: -18px;
+  margin-right: 88px;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-right: 66px;
+}
+
+.photographer-medias span img {
+  margin-left: 5px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.modal {
+  line-height: 70px;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #db8876;
+  width: 40%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  top: 200px;
+  transform: translateX(50%);
+}
+
+.photographer-data {
+  padding-left: 20px;
+}
+
+.close {
+  font-size: 100px;
+  color: white;
+}
+.modal header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal header h2 {
+  font-size: 60px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+}
+.lightBoxMedia {
+  max-width: 250px;
+  max-width: 400px;
+}
+
+.lightbox_modal {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  cursor: default;
+  object-fit: cover;
+  object-position: top;
+  width: 50%;
+  height: 105%;
+  border-radius: 3px;
+  border-radius: 5px;
+  visibility: visible;
+  opacity: 1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  top: 280px;
+  transform: translateX(50%);
+  background: #e5e5e5;
+  border: 1px solid lightgray;
+}
+
+.previous {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.next {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.lightbox-img .lightbox {
+  width: 570px;
+  height: 620px;
+  position: absolute;
+  left: 8px;
+  top: 64px;
+  z-index: 2;
+  margin-left: 58px;
+}
+
+#lightbox-title {
+  color: #901c1c;
+  position: absolute;
+  left: 9%;
+  right: 5.18%;
+  bottom: 2.86%;
+  font-weight: 100;
+  font-size: 30px;
+  line-height: 31px;
+}
+
+.close-lightbox {
+  position: absolute;
+  color: #db8876;
+  top: 80px;
+  right: 15px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+video {
+  width: 86%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  color: #312e2e;
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: self-start;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+form input:last-of-type {
+  height: 200px;
+}
+
+form input {
+  width: 100%;
+  height: 68px;
+  border: none;
+  border-radius: 5px;
+}
+
+.closeModal {
+  position: relative;
+  z-index: 0;
+  width: fit-content;
+  margin: 1.5rem auto;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  color: white;
+  animation: open-modal forwards;
+}
+
+.close-contact {
+  position: absolute;
+  color: #db8876;
+  top: 2rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    max-width: 1440px;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+  }
+  .logo {
+    min-width: 15rem;
+    position: relative;
+    top: unset;
+  }
+}
